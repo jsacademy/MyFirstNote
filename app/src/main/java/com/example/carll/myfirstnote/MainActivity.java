@@ -8,6 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.example.carll.myfirstnote.utility.DisplayUtility;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            DisplayUtility displayUtility = new DisplayUtility(this);
+            String screen = "Density: " + displayUtility.getDensity() + ", Width: "
+                    + displayUtility.getWidth() + " dp, Height: "
+                    + displayUtility.getHeight() + " dp";
+            Toast.makeText(this, screen, Toast.LENGTH_SHORT).show();
+
             return true;
         }
 
