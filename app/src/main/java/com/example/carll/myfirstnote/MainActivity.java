@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 createNote();
             }
         });
+
+        // Notes
+        noteData = new NoteData(this);
+        refreshDisplay();
     }
 
     private void refreshDisplay() {
